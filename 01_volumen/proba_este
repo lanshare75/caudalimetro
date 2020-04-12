@@ -1,0 +1,34 @@
+/*Llenador de recipientes setenado el la cantidad de litros deseados 10/4/20*/  
+
+/*Inicio carga de Librerias*/
+
+#include <LiquidCrystal_I2C.h>
+/*Fin carga de Librerias*/
+
+//Crear el objeto lcd  dirección  "0x3F" y configuro las caracteristicas del lcd (20 columnas x 4 filas)
+LiquidCrystal_I2C lcd(0x3F, 20, 4);
+
+
+
+void setup() 
+{ 
+// Inicio la comunicación serie
+  Serial.begin(9600);
+
+
+  lcd.init(); //Inicio el LCD
+  lcd.backlight(); //enciendo el Backlight del LCD
+  
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("LEANDRITO");
+  
+  
+} 
+
+void loop ()    
+{
+
+
+
+}
